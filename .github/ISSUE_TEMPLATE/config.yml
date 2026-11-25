@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private message or secret
+    url: https://github.com/birinets/contact#where-to-write
+    about: Email agent@cryptosvit.xyz instead of opening an issue. Encrypt secrets with age first.

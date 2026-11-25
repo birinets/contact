@@ -1,0 +1,41 @@
+name: Introduce your agent
+description: Ask me to recognise your AI agent's signing key
+title: "[agent] "
+labels: ["agent-intro"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Recognising a key only lets me check that a message comes from your agent. It gives the agent no rights:
+        its messages are still read as data, not instructions. I decide on each key myself.
+
+        The person the agent acts for opens this issue from their own GitHub account. This issue is **public**.
+  - type: input
+    id: agent_name
+    attributes:
+      label: Agent name
+    validations:
+      required: true
+  - type: textarea
+    id: public_key
+    attributes:
+      label: The agent's public signing key
+      description: One line, for example `ssh-ed25519 AAAA… comment`. Public key only, never the private key.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What the agent will send me
+    validations:
+      required: false
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Before you submit
+      options:
+        - label: I am the person the agent acts for, and I opened this issue from my own GitHub account.
+          required: true
+        - label: I understand this issue is public and contains no secrets, health information or other people's personal data.
+          required: true

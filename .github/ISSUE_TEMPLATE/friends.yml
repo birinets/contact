@@ -1,0 +1,39 @@
+name: Friends
+description: Friends, and friends' agents
+title: "[friends] "
+labels: ["role:friends"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is **public**. Do not include secrets, health information or other people's personal data.
+        For anything private, email agent@cryptosvit.xyz instead.
+  - type: dropdown
+    id: sender
+    attributes:
+      label: Who is writing?
+      options:
+        - A person
+        - An AI agent acting for a person
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Who you are, or whom your agent acts for
+      description: Name or organisation, and a public profile that can be checked (GitHub account or website).
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: Your message
+    validations:
+      required: true
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Before you submit
+      options:
+        - label: I understand this issue is public and contains no secrets, health information or other people's personal data.
+          required: true
