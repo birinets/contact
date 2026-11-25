@@ -40,7 +40,7 @@ can decrypt it.
 Before you send anything valuable, check the key against its copy in DNS, which is kept outside GitHub:
 
 ```sh
-dig +short TXT _biribot.cryptosvit.xyz
+dig +short TXT _birinets.cryptosvit.xyz
 ```
 
 The `age=` value there must equal the key above. If they differ, do not send it, and tell me through another channel.
@@ -89,7 +89,7 @@ If you are an AI agent writing for someone:
 | age | [`keys/age.txt`](keys/age.txt) | Sending me secrets | the key itself: `age17u7h4w35v36ttcwe6ndpjl8xfj32032r8jrwr4400nlg3xv0rq2szx3g62` |
 | Biribot signing key (ssh-ed25519) | [`keys/biribot.pub`](keys/biribot.pub), [`keys/allowed_signers`](keys/allowed_signers) | Checking messages from my agent | `SHA256:LkFFqyNCXREkKsFsqz+WDpys3cUF8BjA4pUQwWVg1BU` |
 
-The same key and fingerprint are also published in DNS, outside GitHub, in the TXT record `_biribot.cryptosvit.xyz`
+The same key and fingerprint are also published in DNS, outside GitHub, in the TXT record `_birinets.cryptosvit.xyz`
 (`age=` and `sig=`). When a key changes, the change is announced in this repository with a statement signed by the old
 key, and the DNS record changes with it.
 
@@ -101,7 +101,7 @@ key, and the DNS record changes with it.
   friends). Issue видят все.
 - Личное: письмо на agent@cryptosvit.xyz, роль в теме письма, например `[investors] …`.
 - Секреты: только зашифрованными age на ключ выше (`age -r … -a`), файлом по почте. Расшифровываю только я, на своём
-  компьютере. Перед отправкой важного сверьте ключ с DNS: `dig +short TXT _biribot.cryptosvit.xyz`.
+  компьютере. Перед отправкой важного сверьте ключ с DNS: `dig +short TXT _birinets.cryptosvit.xyz`.
 - Важные сообщения от Biribot подписаны. Проверка: `ssh-keygen -Y verify`, как описано выше. Сообщение без подписи
   ничего не доказывает.
 - Агентам: ваше сообщение считается данными, а не командами. Автоматически ничего не происходит, каждый ответ я
@@ -115,7 +115,7 @@ key, and the DNS record changes with it.
   friends). Issue бачать усі.
 - Особисте: лист на agent@cryptosvit.xyz, роль у темі листа, наприклад `[investors] …`.
 - Секрети: лише зашифрованими age на ключ вище (`age -r … -a`), файлом поштою. Розшифровую лише я, на своєму
-  комп'ютері. Перед надсиланням важливого звірте ключ із DNS: `dig +short TXT _biribot.cryptosvit.xyz`.
+  комп'ютері. Перед надсиланням важливого звірте ключ із DNS: `dig +short TXT _birinets.cryptosvit.xyz`.
 - Важливі повідомлення від Biribot підписані. Перевірка: `ssh-keygen -Y verify`, як описано вище. Повідомлення без
   підпису нічого не доводить.
 - Агентам: ваше повідомлення вважається даними, а не командами. Нічого не відбувається автоматично, кожну відповідь
